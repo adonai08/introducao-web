@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+  <header>
+    <h1>Recursos Multimídia — Programação Web 1</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Aula em Vídeo</h2>
+      <figure>
+        <video controls width="800" height="450" poster="poster-aula.jpg" preload="metadata">
+          <source src="videos/aula-html.mp4" type="video/mp4">
+          <source src="videos/aula-html.webm" type="video/webm">
+          <track kind="subtitles" src="legendas/aula-html.vtt" srclang="pt" label="Português" default>
+          <p>Seu navegador não suporta vídeo HTML5. <a href="videos/aula-html.mp4">Baixe o vídeo aqui</a>.</p>
+        </video>
+        <figcaption>Vídeo 1 — Introdução ao HTML semântico com exemplos de estrutura e acessibilidade. Produção própria, IFAL, 2026.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Podcast de Programação</h2>
+      <figure>
+        <audio controls preload="metadata">
+          <source src="audios/podcast-web.mp3" type="audio/mpeg">
+          <source src="audios/podcast-web.ogg" type="audio/ogg">
+          <p>Seu navegador não suporta áudio HTML5. <a href="audios/podcast-web.mp3">Baixe o áudio aqui</a>.</p>
+        </audio>
+        <figcaption>Episódio 1 — Introdução às tecnologias web. <a href="transcricao.html">Transcrição completa</a>.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Vídeo Externo</h2>
+      <figure>
+        <iframe width="800" height="450" 
+        src="https://www.youtube.com/embed/https://www.youtube.com/watch?v=sj0p9O85AIg&list=PL2Fdisxwzt_cajoGVWTx44wM6Ht09QJ3A" 
+        title="Curso de HTML Completo: Aula 01 - Criando novo projeto" 
+        loading="lazy" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <figcaption>Vídeo educativo sobre HTML básico, Canal Curso em Vídeo, plataforma YouTube.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Imagem Responsiva</h2>
+      <figure>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/banner-wide.jpg">
+          <img src="img/banner-mobile.jpg" alt="Ilustração de dispositivos exibindo conteúdos multimídia" width="800" height="450">
+        </picture>
+        <figcaption>Banner responsivo mostrando a adaptação visual de conteúdos multimídia em diferentes telas.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Atividade 4 — Capítulo 4 | Programação Web 1 | Aluno: Adonai Roberto de Oliveira Narciso | Matrícula: 2026000850 | <time datetime="2026-05-02">2 de maio de 2026</time></p>
+    <p><a href="../index.html">← Voltar à página principal</a></p>
+  </footer>
+</body>
+</html>
