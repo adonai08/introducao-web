@@ -72,3 +72,31 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.atividades {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.coluna {
+    flex: 1;
+}
+
+.coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coluna li {
+    margin-bottom: 8px;
+}
+
+.coluna a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.coluna a:hover {
+    text-decoration: underline;
+}
