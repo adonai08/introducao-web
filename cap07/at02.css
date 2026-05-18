@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: aliceblue;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  border-left: 4px solid #007BFF;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+header,
+footer {
+  background-color: #dbeafe;
+  padding: 1rem;
+}

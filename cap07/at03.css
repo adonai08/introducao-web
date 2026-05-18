@@ -1,0 +1,189 @@
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+/* seção 1 */
+
+a[href^="https"] {
+    color: green;
+}
+
+a[href^="http:"] {
+    color: red;
+}
+
+a[href^="http:"]::after {
+    content: " ⚠";
+}
+
+a[href$=".pdf"] {
+    color: orange;
+}
+
+a[href$=".pdf"]::after {
+    content: " [PDF]";
+}
+
+a[href^="#"] {
+    color: gray;
+    font-style: italic;
+}
+
+a[target="_blank"]::after {
+    content: " ↗";
+}
+
+/* seção 2 */
+
+#sec-estrutural li:first-child {
+    font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+    color: blue;
+}
+
+#sec-estrutural li:nth-child(even) {
+    background-color: #dbeafe;
+}
+
+#sec-estrutural li:nth-child(odd) {
+    background-color: #eff6ff;
+}
+
+#sec-estrutural li:nth-child(3) {
+    border-left: 5px solid #007BFF;
+    padding-left: 0.5rem;
+}
+
+/* seção 3 */
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+}
+
+input:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+input:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+input:required {
+    border-left: 4px solid #007BFF;
+}
+
+input:not(:placeholder-shown):valid {
+    border: 2px solid green;
+}
+
+input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+}
+
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+}
+
+button {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* seção 4 */
+
+.citacao::before {
+    content: '"';
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+.citacao::after {
+    content: '"';
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+.obrigatorio::after {
+    content: " *";
+    color: red;
+}
+
+::selection {
+    background-color: #007BFF;
+    color: white;
+}
+
+.input-custom::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+/* seção 5 */
+
+h3 + p {
+    font-size: 1.1rem;
+    color: #007BFF;
+}
+
+li:not(.ativo) {
+    opacity: 0.5;
+}
+
+li.ativo {
+    font-weight: bold;
+}
+
+li.ativo::before {
+    content: "✔ ";
+    color: green;
+}
