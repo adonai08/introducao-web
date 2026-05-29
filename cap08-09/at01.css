@@ -1,45 +1,235 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-    background: #00597a;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    font-family: Georgia, serif;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #b8a88a 0px,
+        #b8a88a 40px,
+        #b29f7c 40px,
+        #b29f7c 80px
+    );
+    font-family:Georgia, serif;
+    color:#2f241c;
+    padding:20px;
 }
 
 .page-wrapper{
-    width: 100%;
-    max-width: 1100px;
-    background: #f8f4ea;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+    max-width:800px;
+    margin:auto;
+    background:
+    linear-gradient(
+        rgba(255,255,255,.15),
+        rgba(0,0,0,.02)
+    ),
+    #f8f1df;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    border:12px solid #5b3a29;
+    border-radius:8px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    outline:2px solid #d8c8a8;
+    outline-offset:-12px;
 }
 
-@media (max-width: 768px){
-
-    .page-wrapper{
-        grid-template-columns: 1fr;
-    }
-
+header{
+    text-align:center;
+    margin-bottom:40px;
+    padding-bottom:20px;
+    border-bottom:2px solid #b89b72;
 }
 
-.intro,
-.main{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+h1{
+    font-size:4rem;
+    color:#3f5b3f;
+    font-weight:normal;
+}
+
+h1::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:2px;
+    background:#b89b72;
+    margin:15px auto;
+}
+
+h2{
+    font-style:italic;
+    color:#5b3a29;
+    margin-top:10px;
+}
+
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements{
+    margin-bottom:40px;
+    padding-bottom:20px;
+    border-bottom:1px dashed #b89b72;
+}
+
+h3{
+    text-align:left;
+    color:#3f5b3f;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+h3::after{
+    content:"";
+    display:block;
+    width:60px;
+    height:1px;
+    background:#b89b72;
+    margin:8px 0;
+}
+
+.preamble h3::before{
+    content:"CAPÍTULO I";
+    display:block;
+    font-size:.8rem;
+    color:#7a4d2c;
+    margin-bottom:5px;
+}
+
+.explanation h3::before{
+    content:"CAPÍTULO II";
+    display:block;
+    font-size:.8rem;
+    color:#7a4d2c;
+    margin-bottom:5px;
+}
+
+.participation h3::before{
+    content:"CAPÍTULO III";
+    display:block;
+    font-size:.8rem;
+    color:#7a4d2c;
+    margin-bottom:5px;
+}
+
+.benefits h3::before{
+    content:"CAPÍTULO IV";
+    display:block;
+    font-size:.8rem;
+    color:#7a4d2c;
+    margin-bottom:5px;
+}
+
+.requirements h3::before{
+    content:"CAPÍTULO V";
+    display:block;
+    font-size:.8rem;
+    color:#7a4d2c;
+    margin-bottom:5px;
+}
+
+p{
+    text-align:justify;
+    line-height:1.7;
+    margin-bottom:12px;
+    text-indent:30px;
+}
+
+.summary p:first-of-type::first-letter,
+.preamble p:first-of-type::first-letter,
+.explanation p:first-of-type::first-letter,
+.participation p:first-of-type::first-letter,
+.benefits p:first-of-type::first-letter,
+.requirements p:first-of-type::first-letter{
+    font-size:3rem;
+    font-weight:bold;
+    color:#5b3a29;
+}
+
+a{
+    color:#7a4d2c;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+    padding-top:15px;
+    border-top:2px solid #b89b72;
+}
+
+footer a{
+    border:1px solid #b89b72;
+    padding:6px 10px;
 }
 
 .sidebar{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    margin-top:30px;
+    padding-top:20px;
+    border-top:2px solid #b89b72;
 }
 
-.page-wrapper{
-    border: 14px solid #8a5b46;
-    box-shadow: 0 0 20px rgba(0,0,0,.35);
-    border-radius: 9px;
+.wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.sidebar h3{
+    text-transform:uppercase;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin-bottom:8px;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources{
+    padding-bottom:15px;
+    border-bottom:1px dashed #b89b72;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .page-wrapper{
+        padding:25px;
+    }
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    h2{
+        font-size:1rem;
+    }
+
+    h3{
+        font-size:1.2rem;
+    }
+
+    p{
+        text-indent:15px;
+    }
 }
