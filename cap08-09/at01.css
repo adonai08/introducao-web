@@ -1,0 +1,45 @@
+
+body{
+    background: #00597a;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, serif;
+}
+
+.page-wrapper{
+    width: 100%;
+    max-width: 1100px;
+    background: #f8f4ea;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px){
+
+    .page-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.intro,
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.page-wrapper{
+    border: 14px solid #8a5b46;
+    box-shadow: 0 0 20px rgba(0,0,0,.35);
+    border-radius: 9px;
+}
