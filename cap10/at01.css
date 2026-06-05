@@ -1,0 +1,252 @@
+/* Variáveis */
+
+:root {
+    --bg-color: #141414;
+    --text-color: #ffffff;
+    --card-color: #1f1f1f;
+    --primary: #e50914;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #141414;
+        --text-color: #ffffff;
+        --card-color: #1f1f1f;
+        --primary: #e50914;
+    }
+}
+
+/* Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 1000;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    width: 5rem;
+    gap: 1rem;
+    background-color: var(--primary);
+    justify-content: center;
+    border-radius:9%
+}
+
+.menu a   {
+    padding-top: 4px;
+    color: #f4f4f4;
+    font-weight: 500;
+    
+}
+
+
+/* Hero */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    background-image: url("assets/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 2rem;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    background: var(--primary);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+/* Catálogo */
+
+.catalogo {
+    padding: 3rem 1rem;
+}
+
+.catalogo h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 1rem;
+}   
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Benefícios */
+
+.vantagens {
+    padding: 3rem 1rem;
+}
+
+.vantagens h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bloco {
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Footer */
+
+.footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 3rem;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficios {
+        flex-direction: row;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+
+    .grid-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Telas grandes */
+
+@media (min-width: 1440px) {
+
+    .catalogo,
+    .vantagens {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+
