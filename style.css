@@ -1,40 +1,142 @@
-/* ATIVIDADES (AJUSTADO SEM QUEBRAR SEU LAYOUT) */
-.atividades {
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fb;
+    color: #1f2937;
+}
+
+
+header {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    padding: 25px 20px;
+}
+
+.navbar {
     display: flex;
-    gap: 40px;
-    margin-top: 20px;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.navbar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.navbar h2 {
+    margin: 5px 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+section, aside {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+
+h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+
+#conhecimentos ul {
+    display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#conhecimentos li {
+    background: #1e3a8a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+
+.atividades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .coluna {
-    flex: 1;
-    min-width: 200px;
-    background-color: #1e3a8a;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
     padding: 15px;
-    border-radius: 10px;
-    color: white;
+    transition: 0.3s;
 }
 
-/* listas dentro das colunas */
+.coluna:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
 .coluna ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .coluna li {
     margin-bottom: 8px;
 }
 
-/* links corrigidos para visibilidade */
 .coluna a {
     text-decoration: none;
-    color: #ffffff;
+    color: #1e3a8a;
     display: block;
-    padding: 5px;
-    border-radius: 5px;
-    transition: 0.3s;
+    padding: 6px;
+    border-radius: 6px;
+    transition: 0.2s;
 }
 
 .coluna a:hover {
-    background-color: #3749a5;
+    background: #1e3a8a;
+    color: white;
 }
+
+
+#contato a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #1e3a8a;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#contato a:hover {
+    background: #3749a5;
+}
+
