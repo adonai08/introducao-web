@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Alunos</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Cadastro de Alunos</h1>
+
+<form id="formCadastro">
+
+<fieldset>
+<legend>Dados Pessoais</legend>
+
+<label for="nome">Nome Completo</label>
+<input
+type="text"
+id="nome"
+required
+minlength="3"
+maxlength="100"
+placeholder="Digite seu nome">
+
+<small id="erroNome"></small>
+
+<label for="email">E-mail</label>
+<input
+type="email"
+id="email"
+required
+placeholder="email@exemplo.com">
+
+<small id="erroEmail"></small>
+
+<label for="telefone">Telefone</label>
+<input
+type="tel"
+id="telefone"
+required
+placeholder="(82) 99999-9999">
+
+<small id="erroTelefone"></small>
+
+<label for="data">Data de nascimento</label>
+<input
+type="date"
+id="data"
+required>
+
+<small id="erroData"></small>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Curso</legend>
+
+<label for="curso">Curso</label>
+
+<select id="curso" required>
+<option value="">Selecione</option>
+<option>Informática</option>
+<option>Administração</option>
+<option>Enfermagem</option>
+<option>Eletrotécnica</option>
+</select>
+
+<small id="erroCurso"></small>
+
+<label>Turno</label>
+
+<label><input type="radio" name="turno" value="Manhã"> Manhã</label>
+<label><input type="radio" name="turno" value="Tarde"> Tarde</label>
+<label><input type="radio" name="turno" value="Noite"> Noite</label>
+
+<small id="erroTurno"></small>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Áreas de Interesse</legend>
+
+<label><input type="checkbox" name="interesse"> Programação</label>
+
+<label><input type="checkbox" name="interesse"> Robótica</label>
+
+<label><input type="checkbox" name="interesse"> Design</label>
+
+<label><input type="checkbox" name="interesse"> Banco de Dados</label>
+
+<small id="erroInteresse"></small>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Segurança</legend>
+
+<label for="senha">Senha</label>
+
+<input
+type="password"
+id="senha"
+required
+minlength="8"
+placeholder="Digite sua senha">
+
+<small class="dica">
+A senha deve conter:
+<br>• Pelo menos 8 caracteres
+<br>• Pelo menos 1 letra maiúscula
+<br>• Pelo menos 1 número
+</small>
+
+<button type="button" id="mostrarSenha">👁 Mostrar senha</button>
+
+<div id="forcaSenha"></div>
+
+<small id="erroSenha"></small>
+
+<label for="confirmar">Confirmar senha</label>
+
+<input
+type="password"
+id="confirmar"
+required
+placeholder="Digite novamente a senha">
+
+<small id="erroConfirmar"></small>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Outros</legend>
+
+<label for="foto">Foto</label>
+
+<input
+type="file"
+id="foto"
+accept=".jpg,.jpeg,.png">
+
+<img id="preview" alt="Pré-visualização da foto">
+
+<small id="erroFoto"></small>
+
+<label for="mensagem">Mensagem</label>
+
+<textarea
+id="mensagem"
+required
+maxlength="500"
+minlength="50"
+placeholder="Digite uma mensagem com no mínimo 50 caracteres"></textarea>
+
+<p><span id="contador">0</span>/500 caracteres</p>
+
+<small id="erroMensagem"></small>
+
+<label>
+
+<input
+type="checkbox"
+id="termos">
+
+Aceito os termos de uso.
+
+</label>
+
+<small id="erroTermos"></small>
+
+</fieldset>
+
+<button type="submit">Enviar</button>
+
+<button type="reset">Limpar</button>
+
+</form>
+
+<script src="js/util.js"></script>
+<script src="js/validacoes.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
